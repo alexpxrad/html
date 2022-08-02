@@ -3,12 +3,38 @@
     <head>
 
         <title>my first html</title>
+
+        <link rel="stylesheet" href="style.css">
+
+
+        
         <style>
-            h1 {
+            /* h1 {
                 color: orange;
                 font-size: 11vw;
 
             }
+
+            #thisOne {
+                background-color: yellow;
+            }
+             header > h1 {
+                background-color: red;
+             }
+
+             .thisType {
+                background-color: blue;
+             }
+             .whitetext {
+                color: white
+             }
+
+             .custom-box {
+                width: 320px;
+                padding: 10px;
+                border: 5px solid gray;
+                margin: 0,
+             } */
 
         </style>
     </head>   
@@ -18,9 +44,10 @@
 
         <a href="/students.html">students</a>
         <header style="font-size: 5em; color: salmon">this is the header</header>
+        <h1 class="thisType whitetext">this is other h1</h1>
 
 
-        <img src="https://media.giphy.com/media/RcRYrpC1pBvIB0icDm/giphy.gif"
+        <img class="custom-box" src="https://media.giphy.com/media/RcRYrpC1pBvIB0icDm/giphy.gif"
         height="270" width="200">
         <br>
 
@@ -41,8 +68,8 @@
             <button>button</button> 
         </form>
         <!-- this is a comment -->
-        <h1>This is a Header more stuff and even more stuff</h1>
-        <h2>OMG, it's smaller</h2>
+        <h1 id="thisOne">This is a Header more stuff and even more stuff</h1>
+        <h2 class="thisType">OMG, it's smaller</h2>
         <p>this is a paragraph
             and therefore and also then 
             <img src="https://media.giphy.com/media/Cs1gO9PLART8Y/giphy.gif"

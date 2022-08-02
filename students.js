@@ -8,8 +8,14 @@ app.use(express.json());
 
 const students = ["damian","alex"]
 
-app.get("/", (req, res) => {
-  let output = "<html><body><ul>";//starts
+app.get("/movies/:movietitle",  (req,res)=> {   // for http://localhost:4000/movie/matrix ... If i'm searching in the mongoDB database
+  
+  const movietitle = req.params.movietitle // get the actual movie title (everything to the right of "/movies/"
+  console.log(`Looking for movie ${movietitle}`) // Show me (to prove the obvios) what the user passed to me.
+  const query = {title: {'$regex': movietitle, '$options': 'i'}}; 
+
+
+  let output = "<html><body> you asked for: " + movieTitle + "<br>";//starts
   
   //output = output + "hello there html" //middle
   for(let i = 0; i < students.length; i++) {
